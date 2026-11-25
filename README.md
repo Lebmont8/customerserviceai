@@ -1,5 +1,5 @@
 # CustomerServiceAI
-A Telegram multi-shop support assistant with a manager bot, isolated shop data, knowledge/catalog configuration, order workflows and encrypted bot-token storage.
+Use one manager bot to configure Telegram support bots for separate shops. Each shop has its own catalog, support information, and orders. The app stores bot tokens encrypted.
 
 The public source retains the application and safety logic. Proprietary AI instructions, credentials, databases, conversations and deployment history are not included.
 
