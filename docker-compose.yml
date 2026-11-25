@@ -1,0 +1,16 @@
+services:
+  customerserviceai:
+    build: .
+    image: customerserviceai:local
+    restart: "no"
+    env_file: .env
+    environment:
+      CUSTOMERSERVICEAI_DB_PATH: /data/customerserviceai.db
+    volumes:
+      - ./.state:/data
+    healthcheck:
+      test: ["CMD", "python", "healthcheck.py"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
